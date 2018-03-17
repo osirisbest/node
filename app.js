@@ -10,6 +10,8 @@ function writeNumbers(res){
 
 http.createServer((req,res)=>{
     res.writeHead(200,{'content-type':'text-plane'})
+    let query = require('url').parse(req.url).query;
+    console.log(query)
     fs.readFile('test.txt','utf-8',(err,data)=>{
         if (err) res.write(err.toString())
             else res.write(data)
