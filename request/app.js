@@ -5,7 +5,8 @@ let opt={
     path: '',
     method: 'GET'
 }
-for (let i=0;i++;i<100){
+console.log('start')
+for (let i=0;i<100;i++){
     setTimeout(()=>{http.request(opt,(res)=>console.log(res.toString())).end()
-console.log(i)},1000)
+console.log(i.toString())},1000)
 }
