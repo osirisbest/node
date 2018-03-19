@@ -4,7 +4,7 @@ let app = require('http').createServer(handler),
 app.listen(8124)
 function handler (req, res) {
   fs.readFile(__dirname + '/chat.html',
-    function (err, data) {
+    (err, data) => {
       if (err) {
         res.writeHead(500)
         return res.end('Error loading chat.html')
